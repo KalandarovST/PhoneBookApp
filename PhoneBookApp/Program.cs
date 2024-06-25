@@ -1,24 +1,18 @@
-﻿using PhoneBookApp.Models;
-using PhoneBookApp.Service;
-using System;
+﻿using PhonebookApp.Services;
 
-namespace PhoneBookApp
+namespace PhonebookApp
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            PhoneBook myPhone = new PhoneBook()
-            {
-                phone = "995003530",
-                name = "Sunatilla"
-            };
-
-            PhoneBookServices phoneBookServices = new PhoneBookServices();
-            phoneBookServices.ShowAllData(myPhone);
-            
-            Console.ReadLine();
-
+            ContactServices contactServices = new ContactServices();
+            contactServices.ExistedContacts();
+            contactServices.ReadAllContacts();
+            contactServices.AddContact();
+            contactServices.RemoveContact();
+            contactServices.EditContact();
+            contactServices.ReadAllContacts();
         }
     }
 }
