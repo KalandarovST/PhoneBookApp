@@ -6,9 +6,6 @@ namespace PhoneBookApp
 {
     internal class Program
     {
-        private static string phone;
-        private static object name;
-
         static void Main(string[] args)
         {
             PhoneBook myPhone = new PhoneBook()
